@@ -15,6 +15,11 @@
 		977FF4DC1EA4DF9F00DEAA5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977FF4DA1EA4DF9F00DEAA5A /* LaunchScreen.storyboard */; };
 		977FF4E71EA4DF9F00DEAA5A /* HashBrownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977FF4E61EA4DF9F00DEAA5A /* HashBrownTests.swift */; };
 		977FF4F21EA4DF9F00DEAA5A /* HashBrownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977FF4F11EA4DF9F00DEAA5A /* HashBrownUITests.swift */; };
+		977FF5061EA4DFC700DEAA5A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977FF5051EA4DFC700DEAA5A /* NotificationCenter.framework */; };
+		977FF5091EA4DFC700DEAA5A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977FF5081EA4DFC700DEAA5A /* TodayViewController.swift */; };
+		977FF50C1EA4DFC700DEAA5A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977FF50A1EA4DFC700DEAA5A /* MainInterface.storyboard */; };
+		977FF5101EA4DFC700DEAA5A /* HashBrownWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 977FF5031EA4DFC700DEAA5A /* HashBrownWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		977FF5161EA4E02200DEAA5A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977FF5151EA4E02200DEAA5A /* Photos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +37,28 @@
 			remoteGlobalIDString = 977FF4CA1EA4DF9F00DEAA5A;
 			remoteInfo = HashBrown;
 		};
+		977FF50E1EA4DFC700DEAA5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 977FF4C31EA4DF9F00DEAA5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 977FF5021EA4DFC700DEAA5A;
+			remoteInfo = HashBrownWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		977FF5141EA4DFC700DEAA5A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				977FF5101EA4DFC700DEAA5A /* HashBrownWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		977FF4CB1EA4DF9F00DEAA5A /* HashBrown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HashBrown.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +75,12 @@
 		977FF4ED1EA4DF9F00DEAA5A /* HashBrownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HashBrownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		977FF4F11EA4DF9F00DEAA5A /* HashBrownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashBrownUITests.swift; sourceTree = "<group>"; };
 		977FF4F31EA4DF9F00DEAA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977FF5031EA4DFC700DEAA5A /* HashBrownWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HashBrownWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		977FF5051EA4DFC700DEAA5A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		977FF5081EA4DFC700DEAA5A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		977FF50B1EA4DFC700DEAA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		977FF50D1EA4DFC700DEAA5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977FF5151EA4E02200DEAA5A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977FF5161EA4E02200DEAA5A /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +106,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		977FF5001EA4DFC700DEAA5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				977FF5061EA4DFC700DEAA5A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +123,8 @@
 				977FF4CD1EA4DF9F00DEAA5A /* HashBrown */,
 				977FF4E51EA4DF9F00DEAA5A /* HashBrownTests */,
 				977FF4F01EA4DF9F00DEAA5A /* HashBrownUITests */,
+				977FF5071EA4DFC700DEAA5A /* HashBrownWidget */,
+				977FF5041EA4DFC700DEAA5A /* Frameworks */,
 				977FF4CC1EA4DF9F00DEAA5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +135,7 @@
 				977FF4CB1EA4DF9F00DEAA5A /* HashBrown.app */,
 				977FF4E21EA4DF9F00DEAA5A /* HashBrownTests.xctest */,
 				977FF4ED1EA4DF9F00DEAA5A /* HashBrownUITests.xctest */,
+				977FF5031EA4DFC700DEAA5A /* HashBrownWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +172,25 @@
 			path = HashBrownUITests;
 			sourceTree = "<group>";
 		};
+		977FF5041EA4DFC700DEAA5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				977FF5151EA4E02200DEAA5A /* Photos.framework */,
+				977FF5051EA4DFC700DEAA5A /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		977FF5071EA4DFC700DEAA5A /* HashBrownWidget */ = {
+			isa = PBXGroup;
+			children = (
+				977FF5081EA4DFC700DEAA5A /* TodayViewController.swift */,
+				977FF50A1EA4DFC700DEAA5A /* MainInterface.storyboard */,
+				977FF50D1EA4DFC700DEAA5A /* Info.plist */,
+			);
+			path = HashBrownWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +201,12 @@
 				977FF4C71EA4DF9F00DEAA5A /* Sources */,
 				977FF4C81EA4DF9F00DEAA5A /* Frameworks */,
 				977FF4C91EA4DF9F00DEAA5A /* Resources */,
+				977FF5141EA4DFC700DEAA5A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				977FF50F1EA4DFC700DEAA5A /* PBXTargetDependency */,
 			);
 			name = HashBrown;
 			productName = HashBrown;
@@ -184,6 +249,23 @@
 			productReference = 977FF4ED1EA4DF9F00DEAA5A /* HashBrownUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		977FF5021EA4DFC700DEAA5A /* HashBrownWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 977FF5111EA4DFC700DEAA5A /* Build configuration list for PBXNativeTarget "HashBrownWidget" */;
+			buildPhases = (
+				977FF4FF1EA4DFC700DEAA5A /* Sources */,
+				977FF5001EA4DFC700DEAA5A /* Frameworks */,
+				977FF5011EA4DFC700DEAA5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HashBrownWidget;
+			productName = HashBrownWidget;
+			productReference = 977FF5031EA4DFC700DEAA5A /* HashBrownWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,6 +293,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 977FF4CA1EA4DF9F00DEAA5A;
 					};
+					977FF5021EA4DFC700DEAA5A = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 725A3BQPW9;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 977FF4C61EA4DF9F00DEAA5A /* Build configuration list for PBXProject "HashBrown" */;
@@ -229,6 +316,7 @@
 				977FF4CA1EA4DF9F00DEAA5A /* HashBrown */,
 				977FF4E11EA4DF9F00DEAA5A /* HashBrownTests */,
 				977FF4EC1EA4DF9F00DEAA5A /* HashBrownUITests */,
+				977FF5021EA4DFC700DEAA5A /* HashBrownWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +343,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		977FF5011EA4DFC700DEAA5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				977FF50C1EA4DFC700DEAA5A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +383,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		977FF4FF1EA4DFC700DEAA5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				977FF5091EA4DFC700DEAA5A /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,6 +403,11 @@
 			isa = PBXTargetDependency;
 			target = 977FF4CA1EA4DF9F00DEAA5A /* HashBrown */;
 			targetProxy = 977FF4EE1EA4DF9F00DEAA5A /* PBXContainerItemProxy */;
+		};
+		977FF50F1EA4DFC700DEAA5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 977FF5021EA4DFC700DEAA5A /* HashBrownWidget */;
+			targetProxy = 977FF50E1EA4DFC700DEAA5A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -317,6 +426,14 @@
 				977FF4DB1EA4DF9F00DEAA5A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		977FF50A1EA4DFC700DEAA5A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				977FF50B1EA4DFC700DEAA5A /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -418,6 +535,7 @@
 		977FF4F71EA4DF9F00DEAA5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 725A3BQPW9;
 				INFOPLIST_FILE = HashBrown/Info.plist;
@@ -431,6 +549,7 @@
 		977FF4F81EA4DF9F00DEAA5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 725A3BQPW9;
 				INFOPLIST_FILE = HashBrown/Info.plist;
@@ -499,6 +618,32 @@
 			};
 			name = Release;
 		};
+		977FF5121EA4DFC700DEAA5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 725A3BQPW9;
+				INFOPLIST_FILE = HashBrownWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bigBro.HashBrown.HashBrownWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		977FF5131EA4DFC700DEAA5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 725A3BQPW9;
+				INFOPLIST_FILE = HashBrownWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bigBro.HashBrown.HashBrownWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -532,6 +677,14 @@
 			buildConfigurations = (
 				977FF4FD1EA4DF9F00DEAA5A /* Debug */,
 				977FF4FE1EA4DF9F00DEAA5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		977FF5111EA4DFC700DEAA5A /* Build configuration list for PBXNativeTarget "HashBrownWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				977FF5121EA4DFC700DEAA5A /* Debug */,
+				977FF5131EA4DFC700DEAA5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
