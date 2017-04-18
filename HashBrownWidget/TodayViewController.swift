@@ -17,19 +17,70 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     var smartAlbums: PHFetchResult<PHAssetCollection>!
     let imageManager = PHCachingImageManager()
     
+    var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    func testCB(hashs: [String] ){
+        
+        var y = imageView.frame.origin.y
+        var x = imageView.frame.maxX + 20
+        for index in 0..<hashs.count {
+        
+            let hash = "#\(hashs[index])"
+            
+            if let font = UIFont(name: "Helvetica", size: 24)
+            {
+                let fontAttributes = [NSFontAttributeName: font] // it says name, but a UIFont works
+                let size = (hash as NSString).size(attributes: fontAttributes)
+                let button = UIButton(type: .custom)
+                button.frame = CGRect(x: x, y: y, width: size.width, height: 30.0)
+                button.titleLabel?.font = font
+                button.backgroundColor = UIColor.darkGray
+                button.setTitle(hash, for: .normal)
+                button.addTarget(self, action: #selector(click(sender:)), for: .touchUpInside)
+                
+                self.view.addSubview(button)
+                x = button.frame.maxX + 10
+                if x + size.width > self.view.frame.width{
+                    y += 40
+                    x = imageView.frame.maxX + 20
+                }
+            }
+        }
+        
+    }
     
+
     override func viewWillAppear(_ animated: Bool) {
-        print("viewWillAppear")
+        imageView = UIImageView(frame: CGRect(x: 20, y: 10, width: 67, height: self.view.frame.height - 20 ))
+        
+        self.view.addSubview(imageView);
         fetchAllPhotos()
+        
+        var prefs = UserDefaults.standard
+        prefs = UserDefaults(suiteName: "group.bigbro.detacter")!
+        print("viewdidload")
+        print(prefs.array(forKey: "hashs") as Any)
+        if let list = prefs.stringArray(forKey: "hashs"){
+            testCB(hashs: list)
+        }
+        
     }
     
     
     func click(sender: UIButton){
-        print("function",sender)
+
+        var prefs = UserDefaults.standard
+        prefs = UserDefaults(suiteName: "group.bigbro.detacter")!
+        let data = ["123","123232323"]
+    
+        prefs.set(data, forKey: "clickImage")
+        prefs.synchronize()
+        
+        print(prefs.array(forKey: "clickImage") as Any)
     }
     
     
@@ -43,15 +94,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             let assetsFetchResult = PHAsset.fetchAssets(in: asset, options: nil)
             let lastOne = assetsFetchResult.lastObject!
         
-            let test = self.getAssetWithId(imageId: lastOne.localIdentifier)
-            
-            
+            //test
+//            let test = self.getAssetWithId(imageId: lastOne.localIdentifier)
             
             let image = self.getAssetThumbnail(asset: lastOne)
-            let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 67, height: self.view.frame.height - 20 ))
-            imageView.image = image
-            
-            self.view.addSubview(imageView);
+            self.imageView.image = image
+    
         }
     }
     
